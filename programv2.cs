@@ -1,13 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Program
+class Program
 {
-
     static void Main()
     {
         Console.Write("Enter your age: ");
@@ -17,4 +11,3 @@ namespace Program
         Console.WriteLine($"Your estimated Maximum Heart Rate is: {maxHeartRate} bpm");
     }
 }
-
