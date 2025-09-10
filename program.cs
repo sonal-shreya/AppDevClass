@@ -1,26 +1,28 @@
 using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Program
+namespace Program
 {
-    static int CountLetters(string s) => s.Count(char.IsLetter);
-
-    static void Main(string[] args)
+    internal class Program
     {
-        string input;
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the side length of the square: ");
+            string input = Console.ReadLine();
 
-        if (args.Length > 0)
-        {
-            // Allow passing the sentence as command-line args
-            input = string.Join(" ", args);
+            if (double.TryParse(input, NumberStyles.Float, CultureInfo.InvariantCulture, out double side) && side >= 0)
+            {
+                double perimeter = 4 * side;
+                Console.WriteLine($"Perimeter = 4 × {side} = {perimeter}");
+            }
+            else
+            {
+                Console.WriteLine("Please enter a non-negative number (use '.' as the decimal separator).");
+            }
         }
-        else
-        {
-            Console.Write("Enter a sentence: ");
-            input = Console.ReadLine() ?? string.Empty;
-        }
-        
-        int letterCount = CountLetters(input);
-        Console.WriteLine($"Number of letters: {letterCount}");
     }
 }
