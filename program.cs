@@ -1,7 +1,13 @@
 using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Program
+namespace Program
 {
+
     static void Main()
     {
         Console.Write("Enter your age: ");
