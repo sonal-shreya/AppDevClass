@@ -11,3 +11,4 @@ class Program
         Console.WriteLine($"Your estimated Maximum Heart Rate is: {maxHeartRate} bpm");
     }
 }
+
